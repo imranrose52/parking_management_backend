@@ -1,0 +1,37 @@
+{
+  "name": "com.trolla.seal.dashboard",
+  "version": "1.0.0",
+  "description": "trolla loader transporter driver backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --es-module-specifier-resolution=node server.js",
+    "dev": "nodemon --es-module-specifier-resolution=node server.js"
+  },
+  "author": "SEAL",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "aws-sdk": "^2.1086.0",
+    "axios": "^0.26.0",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.8",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "firebase-admin": "^10.0.0",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "mongoose-sequence": "^5.3.1",
+    "mongose": "^0.0.2-security",
+    "multer": "^1.4.3",
+    "multer-s3": "^2.10.0",
+    "nodemon": "^2.0.14",
+    "pdf-creator-node": "^2.3.4",
+    "react-router-dom": "^6.1.1",
+    "socket.io": "^4.4.0"
+  }
+}
