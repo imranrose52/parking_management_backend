@@ -16,7 +16,7 @@ app.use(cors());
 app.set("view engine", "ejs");
 
 app.use(express.static("./public")); // make public folder publicly available
-
+app.use("/docs", express.static("docs"));
 app.use("/api/v1", publicRouter); // init public route for login and other public pages
 app.use("/api/v1/admin/", adminRouter); // admin dashboard routes
 

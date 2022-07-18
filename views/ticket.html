@@ -17,8 +17,7 @@
             width: 70%;
             height: 50%;
             margin-top: 50px;
-            background-color: rgb(231, 138, 16);
-            border: 1px solid red;
+          
             border-radius: 10px;
             display: flex;
             justify-content: center;
@@ -62,7 +61,7 @@
             
         </h1>
         <div class="booking_title">
-            <ul class="list-group list-group-flush">
+            <!-- <ul class="list-group list-group-flush">
                 {{#each parking}}
                 <li class="list-group-item">
                     <b>Customer Name :</b> {{this.customer_name}}
@@ -83,7 +82,26 @@
            
 
             </ul>
-            
+             -->
+             <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Mobile Number</th>
+                        <th>vehicle Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each parking}}
+                  
+                    <tr>
+                        <td>{{this.customer_name}}</td>
+                        <td>{{this.mobile_number}}</td>
+                        <td>{{this.vehicle_number}}</td>
+                    </tr>
+                   {{/each}}
+                </tbody>
+             </table>
        
         </div>
     </section>

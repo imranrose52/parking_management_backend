@@ -6,6 +6,13 @@ import { parkingController } from "../../controllers";
 const adminRouter = express.Router();
 adminRouter.post("/parking", catchAsyncErrors(parkingController.post));
 adminRouter.get("/parking", catchAsyncErrors(parkingController.get));
-adminRouter.get("/pdf", catchAsyncErrors(parkingController.pdf));
+adminRouter.put("/parking/:id", catchAsyncErrors(parkingController.update));
+adminRouter.delete("/parking/:id", catchAsyncErrors(parkingController.delete));
+
+// total parking count----------------
+adminRouter.get(
+  "/parkingCount",
+  catchAsyncErrors(parkingController.getParkingCount)
+);
 
 export default adminRouter;

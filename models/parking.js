@@ -16,16 +16,18 @@ const parkingSchema = new mongoose.Schema(
     vehicle_number: {
       type: String,
     },
-    slot: {
-      type: String,
-    },
+
     entry_date: {
       type: String,
       default: new Date().toLocaleDateString(),
     },
-    payment_status: {
+    document: {
       type: String,
-      default: "un-paid",
+      default: null,
+    },
+    status: {
+      type: String,
+      default: "Confirmed",
     },
   },
   {
