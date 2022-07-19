@@ -15,4 +15,10 @@ adminRouter.get(
   catchAsyncErrors(parkingController.getParkingCount)
 );
 
+//  parking count by day----------------
+adminRouter.get(
+  "/count-by-day",
+  catchAsyncErrors(parkingController.count_by_day)
+);
+
 export default adminRouter;

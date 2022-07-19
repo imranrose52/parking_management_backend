@@ -201,6 +201,28 @@ const parkingController = {
   //   path: filepath,
   // });
   // },
+
+  // get count by the day wise-----------
+  async count_by_day(req, res, next) {
+    const count = await Parking_details.aggregate([
+      {
+        $group: {
+          _id: {
+            $dateToString: {
+              date: "$createdAt",
+              format: "%d-%m-%Y",
+            },
+          },
+          count: { $sum: 1 },
+        },
+      },
+    ]);
+
+    if (!count) {
+      res.send("Something Wrong !!");
+    }
+    res.status(201).json({ success: true, count });
+  },
 };
 
 export default parkingController;
